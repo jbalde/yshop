@@ -30,10 +30,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\Cart.cs" />
+    <Compile Include="Model\Products.cs" />
+    <Compile Include="Kernel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
