@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{7522321E-24E7-4F1C-A9F5-4E1F77FB2D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yShop.Core", "yShop.Core\yShop.Core.csproj", "{6B3D8688-8141-45BF-B069-67337083553A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B3D8688-8141-45BF-B069-67337083553A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3D8688-8141-45BF-B069-67337083553A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3D8688-8141-45BF-B069-67337083553A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3D8688-8141-45BF-B069-67337083553A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7522321E-24E7-4F1C-A9F5-4E1F77FB2D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7522321E-24E7-4F1C-A9F5-4E1F77FB2D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7522321E-24E7-4F1C-A9F5-4E1F77FB2D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7522321E-24E7-4F1C-A9F5-4E1F77FB2D74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Web\Web.csproj
+	EndGlobalSection
+EndGlobal

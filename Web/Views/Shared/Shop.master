@@ -1,0 +1,14 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<title>yShop - Online store</title>
+		<link href="/common.css" rel="stylesheet" type="text/css" media="all" />
+		<asp:ContentPlaceHolder id="headerHolder" runat="server" />
+	</head>
+	<body>
+		<asp:ContentPlaceHolder ID="mainHolder" runat="server" />
+	</body>
+</html>
