@@ -77,4 +77,10 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\yShop.Core\yShop.Core.csproj">
+      <Project>{6B3D8688-8141-45BF-B069-67337083553A}</Project>
+      <Name>yShop.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
