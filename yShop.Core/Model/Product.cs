@@ -2,21 +2,77 @@ using System;
 using System.Data.SqlClient;
 
 
+
 namespace yShop.Core.Model {
-	public class Product : ModelBase {
+	/// <summary>
+	/// Product.
+	/// </summary>
+	public class Product {
+		#region Attributes
+		/// <summary>
+		/// The identifier.
+		/// </summary>
 		protected int id;
+		
+		
+		
+		/// <summary>
+		/// The name.
+		/// </summary>
 		protected string name;
+		
+		
+		
+		/// <summary>
+		/// The short description.
+		/// </summary>
         protected string shortDescription;
+        
+        
+        
+        /// <summary>
+        /// The long description.
+        /// </summary>
         protected string longDescription;
+        
+        
+        
+        /// <summary>
+        /// The price.
+        /// </summary>
         protected decimal price;
+        
+        
+        
+        /// <summary>
+        /// The home photo.
+        /// </summary>
         protected string homePhoto;
-        protected int amount; 
         
         
+        
+        /// <summary>
+        /// The amount.
+        /// </summary>
+        protected int amount;
+		#endregion
+        
+        
+        
+        #region Constructors
 		public Product() {
 		}
+		#endregion
 		
-
+		
+		
+		#region Properties
+		/// <summary>
+		/// Gets or sets the amount.
+		/// </summary>
+		/// <value>
+		/// The amount.
+		/// </value>
 		public int Amount {
 			get {
 				return this.amount;
@@ -25,7 +81,15 @@ namespace yShop.Core.Model {
 				amount = value;
 			}
 		}
-
+		
+		
+		
+		/// <summary>
+		/// Gets or sets the home photo.
+		/// </summary>
+		/// <value>
+		/// The home photo.
+		/// </value>
 		public string HomePhoto {
 			get {
 				return this.homePhoto;
@@ -34,7 +98,15 @@ namespace yShop.Core.Model {
 				homePhoto = value;
 			}
 		}
-
+		
+		
+		
+		/// <summary>
+		/// Gets or sets the identifier.
+		/// </summary>
+		/// <value>
+		/// The identifier.
+		/// </value>
 		public int Id {
 			get {
 				return this.id;
@@ -44,6 +116,14 @@ namespace yShop.Core.Model {
 			}
 		}
 
+		
+		
+		/// <summary>
+		/// Gets or sets the long description.
+		/// </summary>
+		/// <value>
+		/// The long description.
+		/// </value>
 		public string LongDescription {
 			get {
 				return this.longDescription;
@@ -52,7 +132,15 @@ namespace yShop.Core.Model {
 				longDescription = value;
 			}
 		}
-
+		
+		
+		
+		/// <summary>
+		/// Gets or sets the name.
+		/// </summary>
+		/// <value>
+		/// The name.
+		/// </value>
 		public string Name {
 			get {
 				return this.name;
@@ -61,7 +149,15 @@ namespace yShop.Core.Model {
 				name = value;
 			}
 		}
-
+		
+		
+		
+		/// <summary>
+		/// Gets or sets the price.
+		/// </summary>
+		/// <value>
+		/// The price.
+		/// </value>
 		public decimal Price {
 			get {
 				return this.price;
@@ -70,7 +166,15 @@ namespace yShop.Core.Model {
 				price = value;
 			}
 		}
-
+		
+		
+		
+		/// <summary>
+		/// Gets or sets the short description.
+		/// </summary>
+		/// <value>
+		/// The short description.
+		/// </value>
 		public string ShortDescription {
 			get {
 				return this.shortDescription;
@@ -79,16 +183,20 @@ namespace yShop.Core.Model {
 				shortDescription = value;
 			}
 		}
+		#endregion
 
 		
 		
+		#region Data methods
+		/// <summary>
+		/// Fills the product.
+		/// </summary>
 		public void fillProduct() {
 			SqlConnection connection = Kernel.Instance.getConnection();
 			
 			SqlCommand command = new SqlCommand("select id, name, shortdescription, longdescription, price, homephoto from yshop_products where id = @productid", connection);
 			
 			command.Parameters.Add("@productid", System.Data.SqlDbType.Int).Value = this.id;
-			
 			
 			SqlDataReader reader = command.ExecuteReader();
 			
@@ -103,6 +211,6 @@ namespace yShop.Core.Model {
 			
 			connection.Close();
 		}
+		#endregion
 	}
 }
-

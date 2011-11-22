@@ -41,7 +41,7 @@ namespace yShop.Core.Model {
 			set {
 				products = value;
 			}
-		}//Products
+		}
 		#endregion
 		
 		
@@ -62,7 +62,7 @@ namespace yShop.Core.Model {
 			product.Amount = amount;
 		
 			this.add(product);
-		}//add
+		}
 		
 		
 		
@@ -82,7 +82,7 @@ namespace yShop.Core.Model {
 		
 			product.fillProduct();
 			this.products.Add(product);
-		}//add
+		}
 		
 		
 		
@@ -97,7 +97,7 @@ namespace yShop.Core.Model {
 			product.Id = id;
 		
 			this.del(product);
-		}//del
+		}
 		
 		
 		
@@ -114,7 +114,7 @@ namespace yShop.Core.Model {
 					return;
 				}
 			}
-		}//del
+		}
 		#endregion
-	}//Cart
-}//yShop.Core.Model
+	}
+}
